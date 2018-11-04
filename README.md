@@ -13,3 +13,4 @@ I've used following frameworks in order to improve it in certain areas such as n
 # Dagger2 
 # Room
 # Retrofit
+# RxJava
