@@ -18,7 +18,7 @@ I've used following frameworks in order to improve it in certain areas such as n
 configure following parameters based on your requirement
   - SCHEDULE_PERIOD_DAYS: Int = 10
   - MAX_SHIFTS_PER_DAY: Int = 2
-  - MAX_SHIFTS_PER_USER: Int = 2;
+  - MAX_SHIFTS_PER_USER: Int = 2
   - USER_OFF_DAYS: Int = 1
 
 
