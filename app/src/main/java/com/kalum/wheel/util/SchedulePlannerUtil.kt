@@ -56,16 +56,22 @@ class SchedulePlannerUtil(users: List<User>) {
                     val users = shifts[i]
                     if (users != null && users.size > 0) {
                         possibleUsers.addAll(users)
+                    }else{
+                        possibleUsers.removeAll(userOff)
                     }
-                    possibleUsers.removeAll(userOff)
                 }
             }
         }
         if (possibleUsers.size == 0) {
             possibleUsers.addAll(users!!)
         }
+
         val randomIndex = getRandomNumber(possibleUsers.size)
-        return possibleUsers[randomIndex]
+        if (randomIndex <= possibleUsers.size) {
+            return possibleUsers[randomIndex]
+        } else {
+            return possibleUsers[0]
+        }
 
     }
 
@@ -137,7 +143,7 @@ class SchedulePlannerUtil(users: List<User>) {
             val ran = Random()
             return ran.nextInt(max)
         } else {
-            return 0
+            return 1
         }
     }
 

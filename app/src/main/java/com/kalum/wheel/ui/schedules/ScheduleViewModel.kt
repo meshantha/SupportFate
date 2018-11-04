@@ -25,14 +25,14 @@ class ScheduleViewModel
     override fun loadData() {
         composite = engineerRepository.getSchedules()
                 .map({
-                    SchedulePlannerUtil(it)
+                    SchedulePlannerUtil(it).schedules
                 })
                 .subscribeOn(scheduler.io())
                 .observeOn(scheduler.ui())
                 .doOnSubscribe { loadingStatus.setValue(true) }
                 .doAfterTerminate { loadingStatus.setValue(false) }
                 .subscribe({ result ->
-                    response.setValue(Response(Status.SUCCESS, result.schedules, null))
+                    response.setValue(Response(Status.SUCCESS, result, null))
                 }, { throwable ->
                     response.setValue(Response(Status.ERROR, null, throwable))
                 })

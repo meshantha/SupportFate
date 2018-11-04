@@ -3,6 +3,7 @@ package com.kalum.wheel.ui
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import com.kalum.wheel.R
 import com.kalum.wheel.databinding.ActivityMainBinding
 import com.kalum.wheel.ui.schedules.SchedulesFragment
@@ -36,6 +37,7 @@ class MainActivity : DaggerAppCompatActivity() {
                         .beginTransaction()
                         .replace(R.id.view_pager, SchedulesFragment(), TAG_SCHEDULE_FRAGMENT)
                         .commit()
+                binding.fab.visibility = View.GONE
             }
         }
 
@@ -48,6 +50,7 @@ class MainActivity : DaggerAppCompatActivity() {
                     .beginTransaction()
                     .replace(R.id.view_pager, UsersFragment(), TAG_USER_FRAGMENT)
                     .commit()
+            binding.fab.visibility = View.VISIBLE
             return true;
         }
         return super.onOptionsItemSelected(item)
