@@ -10,7 +10,7 @@ ViewModels are simples classes/objects that interacts with the logic/model layer
 I've used following frameworks in order to improve it in certain areas such as netwoking, code injction, data persistance.
 
 
-# Dagger2 
-# Room
-# Retrofit
-# RxJava
+- Dagger2 
+- Room
+- Retrofit
+- RxJava
