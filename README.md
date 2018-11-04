@@ -25,3 +25,8 @@ configure following parameters based on your requirement
 # Api
 I have created a simple api using apiary :
 - http://private-4269b25-engineers1.apiary-mock.com/
+
+# todo
+- I have started writting some test cases, might need to complete it
+- I have not optimized the algorithm, could be improved
+- there was an issue with index out of bound in SchedulePlannerUtil - need to fix it
