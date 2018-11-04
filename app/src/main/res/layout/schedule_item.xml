@@ -1,0 +1,58 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="schedule"
+            type="com.kalum.wheel.domain.model.Schedule" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:maxLines="1"
+                android:text="@{`Day ` + schedule.id}"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/engineer1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:maxLines="1"
+                android:text="@{schedule.engineers.get(1).name}"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/engineer2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:maxLines="1"
+                android:text="@{schedule.engineers.get(0).name }"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>
