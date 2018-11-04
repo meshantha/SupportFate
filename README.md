@@ -9,8 +9,19 @@ ViewModels are simples classes/objects that interacts with the logic/model layer
 # Frameworks/Platforms :
 I've used following frameworks in order to improve it in certain areas such as netwoking, code injction, data persistance.
 
-
 - Dagger2 
 - Room
 - Retrofit
 - RxJava
+
+# Configurations
+configure following parameters based on your requirement
+  - SCHEDULE_PERIOD_DAYS: Int = 10
+  - MAX_SHIFTS_PER_DAY: Int = 2
+  - MAX_SHIFTS_PER_USER: Int = 2;
+  - USER_OFF_DAYS: Int = 1
+
+
+# Api
+I have created a simple api using apiary :
+- http://private-4269b25-engineers1.apiary-mock.com/
